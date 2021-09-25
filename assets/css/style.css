@@ -1,7 +1,7 @@
 :root{
     --primaray-cyan--: #2ab2af;
     --primaray-bright-yellow--:#c0df34;
-    --neutral-light-gray--: #e5eff5;
+    --neutral-light-gray--: rgb(229, 239, 245);
     --neutral-grayish-blue--:#98a6bd;
 
 }
@@ -17,4 +17,109 @@
 body,html{
     font-size: 16px;
     height: 100%;
+}
+#geral{
+    width: 100vw;
+    height: 100%;
+    background-color: var(--neutral-light-gray--);
+}
+.container{
+    max-width: 840px;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 255px 255px 50px;
+    grid-template-areas: 
+        "join join join join"
+        "subs subs whyus whyus"
+        "footer footer footer footer"
+    ;
+    justify-content: center;
+    align-content: center;
+}
+.section-join{
+    grid-area: join;
+    background-color: #fff;
+}
+.flex-join{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    padding: 10px;
+}
+.flex-join h1{
+    margin-bottom: 30px;
+    color: var(--primaray-cyan--);
+    font-size: 30px;
+}
+.flex-join h3{
+    color: var(--primaray-bright-yellow--);
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.flex-join p{
+    color: var(--neutral-grayish-blue--);
+    line-height: 30px;
+    font-weight: 400;
+}
+.section-subscription{
+    grid-area: subs;
+    background-color: var(--primaray-cyan--);
+}
+.flex-subscription{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 50px;
+    padding: 10px;
+}
+.flex-subscription h3{
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(222, 245, 251);
+}
+.dollar-month{
+    display: flex;
+    margin-bottom: 16px;
+    align-items: center;
+}
+.dollar-month span{
+    display: inline-block;
+    font-size: 50px;
+    color: rgb(246, 255, 255);
+    margin-right: 10px;
+}
+.dollar-month p{
+    color: rgb(99, 207, 207);
+}
+.flex-subscription p{
+    color: rgb(205, 255, 255);
+}
+.flex-subscription .button{
+    margin-top: 20px;
+    display: flex;
+} 
+.button button{
+    flex-basis: 232px;
+    padding: 10px;
+    background-color: var(--primaray-bright-yellow--);
+    color:#fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.section-whyus{
+    grid-area: whyus;
+    background-color: rgb(74, 190, 189);
+}
+footer{
+    grid-area: footer;
 }
