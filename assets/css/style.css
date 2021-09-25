@@ -120,6 +120,96 @@ body,html{
     grid-area: whyus;
     background-color: rgb(74, 190, 189);
 }
+.flex-whyus{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 50px;
+    padding: 10px;
+}
+.flex-whyus h3{
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(222, 245, 251);
+}
+.flex-whyus p{
+    color: rgb(205, 255, 255);
+    line-height: 22px;
+    font-weight: 400;
+}
 footer{
     grid-area: footer;
+    margin-top: 10px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media(max-width: 870px){
+    .container{
+        max-width: 700px;
+
+    }
+    .flex-join{
+        margin-left: 10px;
+    }
+
+    .flex-subscription{
+        margin-left: 10px;   
+    }
+    .flex-whyus h3{
+        margin-bottom: 15px;
+    }
+    .flex-whyus{
+        margin: 0 20px;
+    }
+    .flex-whyus h3{
+        margin-bottom: 15px
+    }   
+
+}
+@media(max-width: 530px){
+    .container{
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 318px auto 100px;
+        grid-template-areas: 
+            "join join join join"
+            "subs subs subs subs"
+            "whyus whyus whyus whyus"
+            "footer footer footer footer"
+        ;
+        justify-content: center;
+        align-content: stretch;
+    }
+    .flex-join{
+        margin-left: 10px;
+        padding:15px;
+    }
+    .flex-subscription h3{
+        margin-bottom: 20px;  
+    }
+    .button button{
+        flex-basis: 260px;
+        padding: 15px;
+        margin-top: 15px;
+    }
+    .flex-whyus{
+        margin: 20px 0;
+        padding: 15px;
+    }
+    .flex-whyus h3{
+        margin-bottom: 25px;
+    }
+    .flex-whyus p{
+        line-height: 30px;
+    }
+    footer{
+        grid-area: footer;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
 }
